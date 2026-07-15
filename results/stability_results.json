@@ -1,0 +1,227 @@
+{
+ "config": {
+  "NS": 2000,
+  "cost": "moderate eps=0.001 wcap=0.20",
+  "gamP": 2.85,
+  "gamA": {
+   "overlay": 0.1,
+   "vaam": 30.0,
+   "cobb": 0.02
+  },
+  "theta": 0.85
+ },
+ "names": {
+  "overlay": "Modified VAAM (v33)",
+  "vaam": "VAAM",
+  "cobb": "Cobb-Douglas"
+ },
+ "A_shocks": {
+  "overlay": [
+   [
+    "alpha/premia +10%",
+    7.492304112499669
+   ],
+   [
+    "alpha/premia -10%",
+    7.880799080560099
+   ],
+   [
+    "all TE +10%",
+    1.6346617439983775
+   ],
+   [
+    "all TE -10%",
+    1.7314102206277295
+   ],
+   [
+    "+50bp eq-alpha",
+    46.306017130408705
+   ],
+   [
+    "PI premium +10%",
+    3.8993272062580555
+   ],
+   [
+    "PI premium -10%",
+    3.857184876070755
+   ],
+   [
+    "PCDL premium +10%",
+    3.7449018081559293
+   ],
+   [
+    "PCDL premium -10%",
+    3.6790587440505362
+   ],
+   [
+    "eq factor mean +5%",
+    12.593848437802501
+   ],
+   [
+    "eq factor mean -5%",
+    12.451483780052731
+   ],
+   [
+    "bond factor mean +10%",
+    12.887305876505947
+   ],
+   [
+    "HY factor mean +10%",
+    3.667697215752478
+   ]
+  ],
+  "vaam": [
+   [
+    "alpha/premia +10%",
+    4.188953603781044
+   ],
+   [
+    "alpha/premia -10%",
+    1.5130763852260745
+   ],
+   [
+    "all TE +10%",
+    8.072596816829677
+   ],
+   [
+    "all TE -10%",
+    5.9146191195930164
+   ],
+   [
+    "+50bp eq-alpha",
+    18.872154326175046
+   ],
+   [
+    "PI premium +10%",
+    2.547854915013682
+   ],
+   [
+    "PI premium -10%",
+    2.809523686206547
+   ],
+   [
+    "PCDL premium +10%",
+    2.2297067960791703
+   ],
+   [
+    "PCDL premium -10%",
+    2.910023437926269
+   ],
+   [
+    "eq factor mean +5%",
+    10.73464087849049
+   ],
+   [
+    "eq factor mean -5%",
+    10.292979000299583
+   ],
+   [
+    "bond factor mean +10%",
+    16.87443743955487
+   ],
+   [
+    "HY factor mean +10%",
+    3.213991102664066
+   ]
+  ],
+  "cobb": [
+   [
+    "alpha/premia +10%",
+    5.084450169154481e-05
+   ],
+   [
+    "alpha/premia -10%",
+    17.976840827340943
+   ],
+   [
+    "all TE +10%",
+    0.6430556050206814
+   ],
+   [
+    "all TE -10%",
+    0.6636087046458101
+   ],
+   [
+    "+50bp eq-alpha",
+    3.1867991437339547
+   ],
+   [
+    "PI premium +10%",
+    0.3247205581983882
+   ],
+   [
+    "PI premium -10%",
+    3.2202215282340503
+   ],
+   [
+    "PCDL premium +10%",
+    0.09227931584585491
+   ],
+   [
+    "PCDL premium -10%",
+    6.767675378905319
+   ],
+   [
+    "eq factor mean +5%",
+    1.7396142560354586
+   ],
+   [
+    "eq factor mean -5%",
+    18.799475916940896
+   ],
+   [
+    "bond factor mean +10%",
+    26.074755987914088
+   ],
+   [
+    "HY factor mean +10%",
+    0.09429976056245369
+   ]
+  ]
+ },
+ "B_sampling": {
+  "overlay": {
+   "mean_L1_from_centroid": 10.3,
+   "worst_asset_sd": 2.6,
+   "priv_sd": 0.7
+  },
+  "vaam": {
+   "mean_L1_from_centroid": 2.9,
+   "worst_asset_sd": 1.1,
+   "priv_sd": 0.1
+  },
+  "cobb": {
+   "mean_L1_from_centroid": 3.1,
+   "worst_asset_sd": 1.0,
+   "priv_sd": 1.7
+  }
+ },
+ "C_uniqueness": {
+  "overlay": 0.0,
+  "vaam": 33.4,
+  "cobb": 24.3
+ },
+ "scorecard": {
+  "overlay": {
+   "A_mean": 9.4,
+   "A_max": 46.3,
+   "B_disp": 10.3,
+   "B_privSD": 0.7,
+   "C_uniq": 0.0
+  },
+  "vaam": {
+   "A_mean": 6.9,
+   "A_max": 18.9,
+   "B_disp": 2.9,
+   "B_privSD": 0.1,
+   "C_uniq": 33.4
+  },
+  "cobb": {
+   "A_mean": 6.1,
+   "A_max": 26.1,
+   "B_disp": 3.1,
+   "B_privSD": 1.7,
+   "C_uniq": 24.3
+  }
+ }
+}

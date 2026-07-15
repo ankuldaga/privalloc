@@ -1,0 +1,283 @@
+{
+ "meta": {
+  "optimizer": "CMA-ES (evosax/JAX)",
+  "n_sims": 5000,
+  "n_years": 10,
+  "universe": [
+   "us_eq",
+   "us_eq_act",
+   "us_tsy",
+   "intl_eq",
+   "intl_bd",
+   "pe"
+  ],
+  "gamma_s_60": 4.4,
+  "moderate_ara": 11.35,
+  "note": "v26 onset-charged conditional liquidity penalty; pre-tax buyout paper; ARA empirically remapped so baseline penalised PE reproduces paper 17.4%"
+ },
+ "baseline": {
+  "frictionless_pe": 42.9,
+  "baseline_pe": 17.3,
+  "baseline_weights": {
+   "us_eq": 0.0,
+   "us_eq_act": 21.4,
+   "us_tsy": 42.6,
+   "intl_eq": 0.0,
+   "intl_bd": 18.8,
+   "pe": 17.3
+  }
+ },
+ "table6": {
+  "lams": [
+   1.0,
+   2.0,
+   3.0,
+   4.0
+  ],
+  "kaps": [
+   1.0,
+   1.5,
+   2.0,
+   2.5
+  ],
+  "pe": [
+   [
+    17.3,
+    15.9,
+    14.9,
+    13.5
+   ],
+   [
+    11.5,
+    9.4,
+    7.8,
+    3.9
+   ],
+   [
+    7.6,
+    4.1,
+    2.5,
+    0.0
+   ],
+   [
+    1.6,
+    0.0,
+    0.0,
+    0.0
+   ]
+  ],
+  "caption": "Optimal buyout % as the liquidity-aversion multiplier (lambda) and the onset-charge multiplier (kappa) scale up."
+ },
+ "table7": {
+  "rows": [
+   {
+    "pctile": 50,
+    "alpha_bps": 0,
+    "pe": 0.0,
+    "paper": 0.0
+   },
+   {
+    "pctile": 55,
+    "alpha_bps": 44,
+    "pe": 0.0,
+    "paper": null
+   },
+   {
+    "pctile": 60,
+    "alpha_bps": 92,
+    "pe": 0.0,
+    "paper": 5.2
+   },
+   {
+    "pctile": 65,
+    "alpha_bps": 295,
+    "pe": 17.3,
+    "paper": 17.4
+   },
+   {
+    "pctile": 70,
+    "alpha_bps": 496,
+    "pe": 43.7,
+    "paper": 28.6
+   },
+   {
+    "pctile": 75,
+    "alpha_bps": 515,
+    "pe": 45.8,
+    "paper": 29.6
+   }
+  ],
+  "caption": "Optimal buyout % vs the manager-skill percentile (empirical Table-2 alpha distribution)."
+ },
+ "table8": {
+  "rows": [
+   {
+    "te_bps": 500,
+    "pe": 27.1,
+    "paper": 24.5
+   },
+   {
+    "te_bps": 660,
+    "pe": 17.3,
+    "paper": 17.4
+   },
+   {
+    "te_bps": 990,
+    "pe": 0.0,
+    "paper": 9.3
+   },
+   {
+    "te_bps": 1250,
+    "pe": 0.0,
+    "paper": 6.2
+   },
+   {
+    "te_bps": 1500,
+    "pe": 0.0,
+    "paper": 3.6
+   }
+  ],
+  "caption": "Optimal buyout % vs PE tracking error (manager dispersion)."
+ },
+ "table9": {
+  "ids": [
+   "us_eq",
+   "us_eq_act",
+   "us_tsy",
+   "intl_eq",
+   "intl_bd",
+   "pe"
+  ],
+  "rows": [
+   {
+    "pctile": 50,
+    "weights": {
+     "us_eq": 0.0,
+     "us_eq_act": 32.0,
+     "us_tsy": 46.9,
+     "intl_eq": 4.4,
+     "intl_bd": 16.7,
+     "pe": 0.0
+    }
+   },
+   {
+    "pctile": 65,
+    "weights": {
+     "us_eq": 0.0,
+     "us_eq_act": 21.4,
+     "us_tsy": 42.6,
+     "intl_eq": 0.0,
+     "intl_bd": 18.8,
+     "pe": 17.3
+    }
+   },
+   {
+    "pctile": 70,
+    "weights": {
+     "us_eq": 0.0,
+     "us_eq_act": 0.0,
+     "us_tsy": 40.0,
+     "intl_eq": 0.0,
+     "intl_bd": 16.3,
+     "pe": 43.7
+    }
+   }
+  ],
+  "caption": "Full allocation vs manager alpha: buyout substitutes against public active equity as skill rises."
+ },
+ "tableE1": {
+  "ids": [
+   "us_eq",
+   "us_eq_act",
+   "us_tsy",
+   "intl_eq",
+   "intl_bd",
+   "pe"
+  ],
+  "rows": [
+   {
+    "eq_target": 40,
+    "gamma_s": 4.78,
+    "weights": {
+     "us_eq": 0.0,
+     "us_eq_act": 19.8,
+     "us_tsy": 42.7,
+     "intl_eq": 0.0,
+     "intl_bd": 20.6,
+     "pe": 16.9
+    }
+   },
+   {
+    "eq_target": 60,
+    "gamma_s": 4.4,
+    "weights": {
+     "us_eq": 0.0,
+     "us_eq_act": 21.4,
+     "us_tsy": 42.6,
+     "intl_eq": 0.0,
+     "intl_bd": 18.8,
+     "pe": 17.3
+    }
+   },
+   {
+    "eq_target": 80,
+    "gamma_s": 1.66,
+    "weights": {
+     "us_eq": 0.0,
+     "us_eq_act": 39.6,
+     "us_tsy": 25.6,
+     "intl_eq": 17.8,
+     "intl_bd": 0.0,
+     "pe": 17.0
+    }
+   }
+  ],
+  "caption": "Allocation across passive risk aversion (equity target set by gamma_s)."
+ },
+ "tableE2": {
+  "rows": [
+   {
+    "level": "low",
+    "ara": 6.81,
+    "pe": 38.8,
+    "paper": 23.5
+   },
+   {
+    "level": "moderate",
+    "ara": 11.35,
+    "pe": 17.3,
+    "paper": 17.4
+   },
+   {
+    "level": "high",
+    "ara": 17.03,
+    "pe": 0.0,
+    "paper": 11.2
+   }
+  ],
+  "caption": "Buyout % across active risk aversion (60/40, baseline penalties)."
+ },
+ "re_example": {
+  "kappa_normal_bps": 510,
+  "kappa_stress_bps": 4040,
+  "paper_kappa": "446 / 2787",
+  "re_allocation": 0.0,
+  "weights": {
+   "us_eq": 0.0,
+   "us_eq_act": 32.3,
+   "us_tsy": 47.7,
+   "intl_eq": 4.0,
+   "intl_bd": 16.0,
+   "pe": 0.0
+  },
+  "ids": [
+   "us_eq",
+   "us_eq_act",
+   "us_tsy",
+   "intl_eq",
+   "intl_bd",
+   "pe"
+  ],
+  "caption": "Open-end core real estate: heavier gating penalties -> lower allocation than the 17% buyout baseline."
+ }
+}

@@ -1,0 +1,452 @@
+{
+ "config": {
+  "utility": "cobb",
+  "utility_label": "Cobb-Douglas",
+  "gamP": 2.85,
+  "gamA": 0.02,
+  "theta": 0.85,
+  "eps_base": 0.001,
+  "wcap": 0.2,
+  "cost_label": "base",
+  "active_target": 70.0,
+  "optimizer": "SLSQP multi-start (scipy)",
+  "n_sims": 2000,
+  "n_quarters": 40,
+  "note": "Cobb-Douglas; SLSQP multi-start; gamP->60/40 (passive), gamA->70/30 (public); base cost floor; incl intl_eq_act"
+ },
+ "cost_scan": [
+  {
+   "name": "ultra-low",
+   "eps": 0.0002,
+   "wcap": 0.6,
+   "eta_pi": 0.0235,
+   "maxpriv": 22.7,
+   "privates": 40.4,
+   "uniq_l1": 0.0,
+   "stable": true
+  },
+  {
+   "name": "low",
+   "eps": 0.0004,
+   "wcap": 0.4,
+   "eta_pi": 0.0354,
+   "maxpriv": 18.3,
+   "privates": 33.6,
+   "uniq_l1": 0.0,
+   "stable": true
+  },
+  {
+   "name": "mid",
+   "eps": 0.0007,
+   "wcap": 0.28,
+   "eta_pi": 0.0507,
+   "maxpriv": 12.2,
+   "privates": 22.7,
+   "uniq_l1": 0.0,
+   "stable": true
+  },
+  {
+   "name": "base",
+   "eps": 0.001,
+   "wcap": 0.2,
+   "eta_pi": 0.071,
+   "maxpriv": 6.5,
+   "privates": 13.2,
+   "uniq_l1": 0.0,
+   "stable": true
+  }
+ ],
+ "base": {
+  "gamP": 2.85,
+  "gamA": 0.02,
+  "roll": {
+   "equity": 75.2,
+   "bonds": 3.8,
+   "active": 79.0,
+   "privates": 21.0,
+   "cash": 0.0,
+   "acteq_share": 100.0,
+   "eq_active": 75.2,
+   "bd_active": 3.8,
+   "pass_eq": 0.0,
+   "pub_active_share": 100.0
+  },
+  "weights": {
+   "us_eq": 0.0,
+   "intl_eq": 0.0,
+   "us_agg": 0.0,
+   "intl_bd": 0.0,
+   "us_hy": 0.0,
+   "us_muni": 0.0,
+   "us_eq_act": 0.4514,
+   "intl_eq_act": 0.301,
+   "us_bd_act": 0.0378,
+   "pe": 0.0417,
+   "pre": 0.0,
+   "pi": 0.0887,
+   "pcdl": 0.0794,
+   "cash": 0.0
+  }
+ },
+ "sens": {
+  "PRA": {
+   "x": [
+    1.5,
+    2.0,
+    2.85,
+    4.0,
+    6.0,
+    9.0
+   ],
+   "rows": [
+    {
+     "equity": 100.0,
+     "bonds": 0.0,
+     "active": 100.0,
+     "privates": 0.0,
+     "cash": 0.0,
+     "acteq_share": 100.0,
+     "eq_active": 100.0,
+     "bd_active": 0.0,
+     "pass_eq": 0.0,
+     "pub_active_share": 100.0
+    },
+    {
+     "equity": 88.8,
+     "bonds": 1.7,
+     "active": 90.5,
+     "privates": 9.5,
+     "cash": 0.0,
+     "acteq_share": 100.0,
+     "eq_active": 88.8,
+     "bd_active": 1.7,
+     "pass_eq": 0.0,
+     "pub_active_share": 100.0
+    },
+    {
+     "equity": 75.4,
+     "bonds": 3.8,
+     "active": 79.3,
+     "privates": 20.7,
+     "cash": 0.0,
+     "acteq_share": 100.0,
+     "eq_active": 75.4,
+     "bd_active": 3.8,
+     "pass_eq": 0.0,
+     "pub_active_share": 100.0
+    },
+    {
+     "equity": 58.1,
+     "bonds": 29.1,
+     "active": 87.2,
+     "privates": 12.8,
+     "cash": 0.0,
+     "acteq_share": 100.0,
+     "eq_active": 58.1,
+     "bd_active": 29.1,
+     "pass_eq": 0.0,
+     "pub_active_share": 100.0
+    },
+    {
+     "equity": 33.9,
+     "bonds": 48.6,
+     "active": 82.5,
+     "privates": 17.5,
+     "cash": 0.0,
+     "acteq_share": 100.0,
+     "eq_active": 33.9,
+     "bd_active": 48.6,
+     "pass_eq": 0.0,
+     "pub_active_share": 100.0
+    },
+    {
+     "equity": 16.8,
+     "bonds": 60.7,
+     "active": 77.5,
+     "privates": 22.5,
+     "cash": 0.0,
+     "acteq_share": 100.0,
+     "eq_active": 16.8,
+     "bd_active": 60.7,
+     "pass_eq": 0.0,
+     "pub_active_share": 100.0
+    }
+   ],
+   "maxjump": 35.8
+  },
+  "ARA": {
+   "x": [
+    0.02,
+    0.05,
+    0.1,
+    0.2,
+    0.5,
+    1.0,
+    2.0,
+    4.0
+   ],
+   "rows": [
+    {
+     "equity": 75.4,
+     "bonds": 3.8,
+     "active": 79.3,
+     "privates": 20.7,
+     "cash": 0.0,
+     "acteq_share": 100.0,
+     "eq_active": 75.4,
+     "bd_active": 3.8,
+     "pass_eq": 0.0,
+     "pub_active_share": 100.0
+    },
+    {
+     "equity": 75.4,
+     "bonds": 3.8,
+     "active": 79.3,
+     "privates": 20.7,
+     "cash": 0.0,
+     "acteq_share": 100.0,
+     "eq_active": 75.4,
+     "bd_active": 3.8,
+     "pass_eq": 0.0,
+     "pub_active_share": 100.0
+    },
+    {
+     "equity": 75.4,
+     "bonds": 3.9,
+     "active": 79.3,
+     "privates": 20.7,
+     "cash": 0.0,
+     "acteq_share": 100.0,
+     "eq_active": 75.4,
+     "bd_active": 3.9,
+     "pass_eq": 0.0,
+     "pub_active_share": 100.0
+    },
+    {
+     "equity": 75.5,
+     "bonds": 3.9,
+     "active": 79.4,
+     "privates": 20.6,
+     "cash": 0.0,
+     "acteq_share": 100.0,
+     "eq_active": 75.5,
+     "bd_active": 3.9,
+     "pass_eq": 0.0,
+     "pub_active_share": 100.0
+    },
+    {
+     "equity": 76.1,
+     "bonds": 4.4,
+     "active": 80.5,
+     "privates": 19.5,
+     "cash": 0.0,
+     "acteq_share": 100.0,
+     "eq_active": 76.1,
+     "bd_active": 4.4,
+     "pass_eq": 0.0,
+     "pub_active_share": 100.0
+    },
+    {
+     "equity": 78.6,
+     "bonds": 8.9,
+     "active": 87.4,
+     "privates": 12.6,
+     "cash": 0.0,
+     "acteq_share": 100.0,
+     "eq_active": 78.6,
+     "bd_active": 8.9,
+     "pass_eq": 0.0,
+     "pub_active_share": 100.0
+    },
+    {
+     "equity": 76.0,
+     "bonds": 15.3,
+     "active": 91.3,
+     "privates": 8.7,
+     "cash": 0.0,
+     "acteq_share": 100.0,
+     "eq_active": 76.0,
+     "bd_active": 15.3,
+     "pass_eq": 0.0,
+     "pub_active_share": 100.0
+    },
+    {
+     "equity": 66.1,
+     "bonds": 24.1,
+     "active": 90.2,
+     "privates": 9.8,
+     "cash": 0.0,
+     "acteq_share": 100.0,
+     "eq_active": 66.1,
+     "bd_active": 24.1,
+     "pass_eq": 0.0,
+     "pub_active_share": 100.0
+    }
+   ],
+   "maxjump": 16.3
+  },
+  "alpha": {
+   "x": [
+    0.5,
+    0.75,
+    1.0,
+    1.25,
+    1.5
+   ],
+   "rows": [
+    {
+     "equity": 85.4,
+     "bonds": 14.6,
+     "active": 100.0,
+     "privates": 0.0,
+     "cash": 0.0,
+     "acteq_share": 100.0,
+     "eq_active": 85.4,
+     "bd_active": 14.6,
+     "pass_eq": 0.0,
+     "pub_active_share": 100.0
+    },
+    {
+     "equity": 84.5,
+     "bonds": 11.5,
+     "active": 96.0,
+     "privates": 4.0,
+     "cash": 0.0,
+     "acteq_share": 100.0,
+     "eq_active": 84.5,
+     "bd_active": 11.5,
+     "pass_eq": 0.0,
+     "pub_active_share": 100.0
+    },
+    {
+     "equity": 75.4,
+     "bonds": 3.8,
+     "active": 79.3,
+     "privates": 20.7,
+     "cash": 0.0,
+     "acteq_share": 100.0,
+     "eq_active": 75.4,
+     "bd_active": 3.8,
+     "pass_eq": 0.0,
+     "pub_active_share": 100.0
+    },
+    {
+     "equity": 75.2,
+     "bonds": 3.8,
+     "active": 79.0,
+     "privates": 21.0,
+     "cash": 0.0,
+     "acteq_share": 100.0,
+     "eq_active": 75.2,
+     "bd_active": 3.8,
+     "pass_eq": 0.0,
+     "pub_active_share": 100.0
+    },
+    {
+     "equity": 71.8,
+     "bonds": 0.0,
+     "active": 71.8,
+     "privates": 28.2,
+     "cash": 0.0,
+     "acteq_share": 100.0,
+     "eq_active": 71.8,
+     "bd_active": 0.0,
+     "pass_eq": 0.0,
+     "pub_active_share": 100.0
+    }
+   ],
+   "maxjump": 42.5
+  },
+  "TE": {
+   "x": [
+    0.5,
+    0.75,
+    1.0,
+    1.25,
+    1.5
+   ],
+   "rows": [
+    {
+     "equity": 75.5,
+     "bonds": 3.8,
+     "active": 79.3,
+     "privates": 20.7,
+     "cash": 0.0,
+     "acteq_share": 100.0,
+     "eq_active": 75.5,
+     "bd_active": 3.8,
+     "pass_eq": 0.0,
+     "pub_active_share": 100.0
+    },
+    {
+     "equity": 75.4,
+     "bonds": 3.8,
+     "active": 79.3,
+     "privates": 20.7,
+     "cash": 0.0,
+     "acteq_share": 100.0,
+     "eq_active": 75.4,
+     "bd_active": 3.8,
+     "pass_eq": 0.0,
+     "pub_active_share": 100.0
+    },
+    {
+     "equity": 75.4,
+     "bonds": 3.8,
+     "active": 79.3,
+     "privates": 20.7,
+     "cash": 0.0,
+     "acteq_share": 100.0,
+     "eq_active": 75.4,
+     "bd_active": 3.8,
+     "pass_eq": 0.0,
+     "pub_active_share": 100.0
+    },
+    {
+     "equity": 75.4,
+     "bonds": 3.8,
+     "active": 79.2,
+     "privates": 20.8,
+     "cash": 0.0,
+     "acteq_share": 100.0,
+     "eq_active": 75.4,
+     "bd_active": 3.8,
+     "pass_eq": 0.0,
+     "pub_active_share": 100.0
+    },
+    {
+     "equity": 75.4,
+     "bonds": 3.9,
+     "active": 79.3,
+     "privates": 20.7,
+     "cash": 0.0,
+     "acteq_share": 100.0,
+     "eq_active": 75.4,
+     "bd_active": 3.9,
+     "pass_eq": 0.0,
+     "pub_active_share": 100.0
+    }
+   ],
+   "maxjump": 0.2
+  }
+ },
+ "spike": {
+  "nudge_50bp_eqalpha": 2.5,
+  "nudge_mix": {
+   "us_eq": 0.0,
+   "intl_eq": 0.0,
+   "us_agg": 0.0,
+   "intl_bd": 0.0,
+   "us_hy": 0.0,
+   "us_muni": 0.0,
+   "us_eq_act": 0.4583,
+   "intl_eq_act": 0.3056,
+   "us_bd_act": 0.0386,
+   "pe": 0.0378,
+   "pre": 0.0,
+   "pi": 0.0842,
+   "pcdl": 0.0755,
+   "cash": 0.0
+  }
+ }
+}

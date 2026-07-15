@@ -1,0 +1,59 @@
+{
+ "overlay": {
+  "gamP": 2.85,
+  "gamA": 0.2,
+  "passive": {
+   "equity": 63.4,
+   "bonds": 36.6,
+   "cash": 0.0,
+   "eq_share": 63.4
+  },
+  "public": {
+   "equity": 60.9,
+   "bonds": 39.1,
+   "active": 67.8,
+   "passive_idx": 32.2,
+   "eq_share": 60.9,
+   "active_share": 67.8,
+   "acteq_share": 47.1
+  }
+ },
+ "vaam": {
+  "gamP": 2.85,
+  "gamA": 30.0,
+  "passive": {
+   "equity": 63.4,
+   "bonds": 36.6,
+   "cash": 0.0,
+   "eq_share": 63.4
+  },
+  "public": {
+   "equity": 68.1,
+   "bonds": 31.9,
+   "active": 77.6,
+   "passive_idx": 22.4,
+   "eq_share": 68.1,
+   "active_share": 77.6,
+   "acteq_share": 81.7
+  }
+ },
+ "cobb": {
+  "gamP": 2.85,
+  "gamA": 0.02,
+  "passive": {
+   "equity": 63.4,
+   "bonds": 36.6,
+   "cash": 0.0,
+   "eq_share": 63.4
+  },
+  "public": {
+   "equity": 88.7,
+   "bonds": 11.3,
+   "active": 100.0,
+   "passive_idx": 0.0,
+   "eq_share": 88.7,
+   "active_share": 100.0,
+   "acteq_share": 100.0
+  }
+ }
+}
